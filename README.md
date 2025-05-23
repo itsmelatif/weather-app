@@ -1,59 +1,127 @@
-# WeatherDashboard
+# Weather Dashboard
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+A modern weather dashboard application built with Angular that allows users to track weather conditions for multiple cities. The application features a clean, responsive design and real-time weather updates.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- Search and add multiple cities to track
+- Real-time weather information including:
+  - Temperature
+  - Weather conditions
+  - Weather descriptions
+  - Last update time
+- Responsive grid layout
+- Toast notifications for user feedback
+- Tooltip support for enhanced UX
+- Multi-language support (EN/ID)
 
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── core/
+│   │   └── layout/                 # Main layout component
+│   ├── featured/
+│   │   └── weather-dashboard/      # Weather dashboard feature module
+│   │       ├── component/          # UI components
+│   │       │   ├── weather-card/   # Individual weather card
+│   │       │   ├── weather-page/   # Main dashboard page
+│   │       │   └── weather-search/ # City search component
+│   │       ├── models/            # TypeScript interfaces
+│   │       ├── services/          # API and business logic
+│   │       └── state/             # State management
+│   └── shared/                    # Shared components and utilities
+│       ├── components/
+│       │   ├── button/           # Reusable button component
+│       │   ├── button-icon/      # Icon button component
+│       │   ├── search-input/     # Search input component
+│       │   └── toast-notification/ # Toast notification system
+│       └── directives/
+│           └── tooltip/          # Custom tooltip directive
+```
+
+## State Management
+
+The application uses Akita for state management with the following structure:
+
+- `WeatherStore`: Manages the application state
+- `WeatherQuery`: Provides selectors for accessing state
+- State includes:
+  - Cities array
+  - Loading state
+  - Error handling
+
+## Key Components
+
+### Weather Page Component
+- Main container component
+- Manages the grid layout
+- Handles city list display
+- Integrates search functionality
+
+### Weather Search Component
+- City search functionality
+- Form validation
+- API integration for city lookup
+- Error handling with toast notifications
+
+### Weather Card Component
+- Displays individual city weather
+- Shows temperature, conditions, and description
+- Includes refresh and remove functionality
+- Responsive design
+
+## Development
+
+### Prerequisites
+- Node.js (v14 or higher)
+- Angular CLI (v19.2.3)
+
+### Installation
+```bash
+npm install
+```
+
+### Running the Application
 ```bash
 ng serve
 ```
+Navigate to `http://localhost:4200/`
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
+### Testing
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+## API Integration
 
-For end-to-end (e2e) testing, run:
+The application integrates with weather APIs to fetch:
+- City coordinates
+- Current weather conditions
+- Weather updates
 
-```bash
-ng e2e
-```
+## Styling
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- Uses Tailwind CSS for styling
+- Responsive design
+- Dark/light mode support
+- Custom animations for better UX
 
-## Additional Resources
+## Internationalization
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Supports multiple languages (EN/ID)
+- Easy to add new languages
+- Uses ngx-translate for translations
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## License
+
+This project is licensed under the MIT License.
