@@ -1,0 +1,30 @@
+<div class="min-h-screen flex flex-col bg-gray-100">
+  <nav class="bg-white shadow px-6 py-4 flex justify-between items-center">
+    <div class="text-xl font-bold text-gray-800">L-Weather</div>
+    <div class="flex gap-4 text-gray-700 items-center">
+      <button
+        [class.text-blue-500]="language() === 'en'"
+        class="hover:underline hover:text-blue-500 hover:cursor-pointer"
+        (click)="setLanguage('en')"
+      >
+        EN
+      </button>
+      <button
+        [class.text-blue-500]="language() === 'id'"
+        class="hover:underline hover:text-blue-500 hover:cursor-pointer"
+        (click)="setLanguage('id')"
+      >
+        ID
+      </button>
+    </div>
+  </nav>
+
+  <div class="flex-1 p-6 max-w-6xl mx-auto w-full">
+    <ng-content></ng-content>
+  </div>
+
+  <footer class="bg-white text-center text-sm text-gray-500 py-4">
+    {{ "common.footer" | translate : { year: currentYear } }}
+  </footer>
+  <app-toast-notification></app-toast-notification>
+</div>

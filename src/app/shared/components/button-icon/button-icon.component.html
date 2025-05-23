@@ -1,0 +1,11 @@
+<button
+  (click)="clickBtn()"
+  [class.text-green-500]="type === 'success'"
+  [class.text-red-500]="type === 'danger'"
+  [class.text-blue-500]="type === 'primary'"
+  [class.text-gray-400]="type === 'secondary'"
+  class="transition-color hover:cursor-pointer"
+  [disabled]="disabled"
+>
+  <fa-icon [icon]="icon"></fa-icon>
+</button>

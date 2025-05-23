@@ -1,0 +1,18 @@
+<div class="relative w-full flex items-center">
+  <span class="absolute left-3">
+    <fa-icon id="search-icon" [icon]="faSearch"></fa-icon>
+  </span>
+  <input
+    type="text"
+    class="w-full pl-10 pr-8 py-2 rounded-lg border border-gray-500 focus:outline-none"
+    [class.border-red-500]="invalid"
+    [placeholder]="placeholder"
+    [formControl]="control"
+    (keyup.enter)="onEnter()"
+  />
+  @if (control.value) {
+  <span class="absolute right-3 hover:cursor-pointer" (click)="onClear()">
+    <fa-icon id="clear-icon" [icon]="faXmark"></fa-icon>
+  </span>
+  }
+</div>

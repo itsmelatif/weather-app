@@ -1,0 +1,15 @@
+{
+  "weather": {
+    "title": "Cuaca Dashboard",
+    "no_data": "Tidak ada kota yang ditambahkan. Cari kota untuk melihat cuacanya.",
+    "add_city": "Tambah Kota",
+    "search": {
+      "title": "Cari Cuaca",
+      "placeholder": "Masukkan nama kota"
+    },
+    "no_city_found": "Kota tidak ditemukan"
+  },
+  "common": {
+    "footer": "Hak cipta {{year}} LW. Semua hak dilindungi undang-undang."
+  }
+}

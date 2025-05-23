@@ -1,0 +1,16 @@
+<div class="fixed top-4 right-4 flex flex-col space-y-2 z-50">
+  <div
+    *ngFor="let toast of toastService.toasts()"
+    class="toast-notification relative px-4 py-2 rounded shadow-lg text-white animate-slide-in flex items-center justify-between space-x-4"
+    [class.bg-green-500]="toast.type === 'success'"
+    [class.bg-red-500]="toast.type === 'error'"
+    [class.bg-blue-500]="toast.type === 'info'"
+  >
+    <span>{{ toast.message }}</span>
+
+    <app-button-icon
+      [icon]="faXmark"
+      (onClick)="toastService.removeToast(toast.id)"
+    ></app-button-icon>
+  </div>
+</div>

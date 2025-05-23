@@ -1,0 +1,9 @@
+<span
+  [class.text-red-500]="type === 'error'"
+  [class.text-green-500]="type === 'success'"
+  [class.text-yellow-500]="type === 'warning'"
+  [class.text-gray-500]="type === 'default'"
+  class="text-sm"
+>
+  {{ message }}
+</span>

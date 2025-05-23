@@ -1,0 +1,15 @@
+{
+  "weather": {
+    "title": "Weather Dashboard",
+    "no_data": "No cities added yet. Search for a city to see its weather.",
+    "add_city": "Add City",
+    "search": {
+      "title": "Search Weather",
+      "placeholder": "Enter city name"
+    },
+    "no_city_found": "City not found"
+  },
+  "common": {
+    "footer": "Copyright {{year}} LW. All rights reserved."
+  }
+}
